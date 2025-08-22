@@ -19,7 +19,7 @@ export default function Navbar() {
 
           {/* Title */}
           <h1 className="text-lg md:text-xl font-semibold text-yellow-300">
-            My Product App
+            MyProduct
           </h1>
 
           {/* Navigation Items */}
