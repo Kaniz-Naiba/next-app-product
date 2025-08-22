@@ -15,23 +15,14 @@ export default function LoginPage() {
     e.preventDefault();
     setError("");
 
-    try {
-      const res = await fetch("/api/auth/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, password }),
-      });
+    const res = await signIn("credentials", {
+      redirect: false,
+      email,
+      password,
+    });
 
-      if (!res.ok) {
-        const data = await res.json();
-        setError(data.message || "Login failed");
-        return;
-      }
-
-      router.push("/products");
-    } catch (err) {
-      setError("Something went wrong. Try again.");
-    }
+    if (res.error) setError(res.error);
+    else router.push("/products");
   };
 
   return (
