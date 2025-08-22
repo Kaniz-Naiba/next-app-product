@@ -43,5 +43,5 @@ A full-stack product catalog web application built with **Next.js**, **React**, 
 1. Clone the repo:
 
 ```bash
-git clonehttps://github.com/Kaniz-Naiba/next-app-product.git
+git clone https://github.com/Kaniz-Naiba/next-app-product.git
 cd next-product-app
